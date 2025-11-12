@@ -1,0 +1,93 @@
+{
+  "title": "Marketing Campaign Timeline",
+  "weeks": 8,
+  "weekLabel": "W",
+  "colors": {
+    "blue": "#008FFB",
+    "orange": "#FEB019",
+    "pink": "#FF4560",
+    "green": "#00E396"
+  },
+  "swimlanes": [
+    {
+      "name": "STRATEGY",
+      "tasks": [
+        {
+          "name": "Campaign Planning",
+          "start": 1,
+          "end": 2,
+          "color": "blue"
+        },
+        {
+          "name": "Target Audience Research",
+          "start": 1,
+          "end": 3,
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "name": "CONTENT CREATION",
+      "tasks": [
+        {
+          "name": "Social Media Assets",
+          "start": 2,
+          "end": 4,
+          "color": "orange"
+        },
+        {
+          "name": "Email Templates",
+          "start": 2,
+          "end": 4,
+          "color": "orange"
+        },
+        {
+          "name": "Landing Pages",
+          "start": 3,
+          "end": 5,
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "name": "EXECUTION",
+      "tasks": [
+        {
+          "name": "Social Media Campaign",
+          "start": 4,
+          "end": 8,
+          "color": "pink"
+        },
+        {
+          "name": "Email Campaign",
+          "start": 5,
+          "end": 8,
+          "color": "pink"
+        },
+        {
+          "name": "Paid Advertising",
+          "start": 5,
+          "end": 8,
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "name": "ANALYSIS",
+      "tasks": [
+        {
+          "name": "Performance Tracking",
+          "start": 4,
+          "end": 8,
+          "color": "green"
+        },
+        {
+          "name": "Final Report",
+          "start": 7,
+          "end": 8,
+          "color": "green"
+        }
+      ]
+    }
+  ]
+}

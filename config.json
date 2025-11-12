@@ -1,0 +1,101 @@
+{
+  "title": "Gantt Chart for App",
+  "weeks": 9,
+  "weekLabel": "W",
+  "colors": {
+    "blue": "#008FFB",
+    "ochre": "#FEB019",
+    "orange": "#FF4560",
+    "green": "#00E396",
+    "purple": "#775DD0",
+    "teal": "#00D9E9"
+  },
+  "swimlanes": [
+    {
+      "name": "PLANNING",
+      "tasks": [
+        {
+          "name": "Project Assessment",
+          "start": 1,
+          "end": 3,
+          "color": "blue"
+        },
+        {
+          "name": "Feasibility Check",
+          "start": 2,
+          "end": 4,
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "name": "DESIGN",
+      "tasks": [
+        {
+          "name": "Wireframe",
+          "start": 3,
+          "end": 5,
+          "color": "ochre"
+        },
+        {
+          "name": "Mock-up + Review",
+          "start": 4,
+          "end": 6,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "name": "DEVELOPMENT",
+      "tasks": [
+        {
+          "name": "Technical Stack Research",
+          "start": 4,
+          "end": 7,
+          "color": "orange"
+        },
+        {
+          "name": "Pages Development",
+          "start": 5,
+          "end": 7,
+          "color": "orange"
+        },
+        {
+          "name": "Login/Signup Feature",
+          "start": 6,
+          "end": 9,
+          "color": "orange"
+        },
+        {
+          "name": "Combining Pages & Login",
+          "start": 4,
+          "end": 9,
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "name": "LAUNCH",
+      "tasks": [
+        {
+          "name": "Review + Refine",
+          "start": 7,
+          "end": 8,
+          "color": "green"
+        },
+        {
+          "name": "Packaging Source File",
+          "start": 7,
+          "end": 9,
+          "color": "green"
+        },
+        {
+          "name": "Lauch App",
+          "start": 8,
+          "end": 9,
+          "color": "green"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# .gitignore for Gantt Chart Generator
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Optional: Uncomment if you add build tools later
+# node_modules/
+# dist/
+# build/

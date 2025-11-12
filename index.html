@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customizable Gantt Chart Generator</title>
+  
+  <!-- Link to our CSS -->
+  <link rel="stylesheet" href="gantt-styles.css" />
+  
+  <!-- html2canvas for PNG export -->
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  ></script>
+</head>
+<body>
+
+  <!-- Optional: Config selector for switching between different charts -->
+  <div class="config-selector">
+    <label for="config-select">Select Timeline:</label>
+    <select id="config-select">
+      <option value="config.json">App Development</option>
+      <option value="examples/product-launch.json">Product Launch</option>
+      <option value="examples/marketing-campaign.json">Marketing Campaign</option>
+    </select>
+  </div>
+
+  <!-- Gantt Chart Container -->
+  <div id="gantt-chart-container">
+    <!-- Chart will be generated here -->
+  </div>
+
+  <!-- Export Button -->
+  <div class="export-container">
+    <button id="export-png-btn" class="export-button">Export as PNG</button>
+  </div>
+
+  <!-- Load the Gantt Generator -->
+  <script src="gantt-generator.js"></script>
+
+  <!-- Main Application Script -->
+  <script>
+    let currentChart = null;
+
+    // Load chart on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const configSelect = document.getElementById('config-select');
+      const exportBtn = document.getElementById('export-png-btn');
+
+      // Load initial chart
+      loadChart(configSelect.value);
+
+      // Handle config selection changes
+      configSelect.addEventListener('change', (e) => {
+        loadChart(e.target.value);
+      });
+
+      // Handle export button
+      exportBtn.addEventListener('click', () => {
+        if (currentChart) {
+          exportBtn.textContent = 'Exporting...';
+          exportBtn.disabled = true;
+
+          currentChart.exportAsPNG('gantt-chart-container', 'gantt-chart.png');
+
+          // Re-enable after a short delay
+          setTimeout(() => {
+            exportBtn.textContent = 'Export as PNG';
+            exportBtn.disabled = false;
+          }, 1000);
+        }
+      });
+    });
+
+    async function loadChart(configPath) {
+      try {
+        currentChart = await loadGanttChart(configPath);
+      } catch (error) {
+        console.error('Failed to load chart:', error);
+        document.getElementById('gantt-chart-container').innerHTML = 
+          '<div style="padding: 40px; text-align: center; color: #dc3545;">Failed to load chart. Check console for details.</div>';
+      }
+    }
+  </script>
+
+</body>
+</html>

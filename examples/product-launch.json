@@ -1,0 +1,106 @@
+{
+  "title": "Product Launch Timeline",
+  "weeks": 12,
+  "weekLabel": "Week ",
+  "colors": {
+    "blue": "#008FFB",
+    "purple": "#775DD0",
+    "teal": "#00D9E9",
+    "green": "#00E396",
+    "orange": "#FF4560"
+  },
+  "swimlanes": [
+    {
+      "name": "RESEARCH",
+      "tasks": [
+        {
+          "name": "Market Analysis",
+          "start": 1,
+          "end": 3,
+          "color": "blue"
+        },
+        {
+          "name": "Competitor Research",
+          "start": 2,
+          "end": 4,
+          "color": "blue"
+        },
+        {
+          "name": "User Surveys",
+          "start": 3,
+          "end": 5,
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "name": "PRODUCT DEVELOPMENT",
+      "tasks": [
+        {
+          "name": "MVP Development",
+          "start": 4,
+          "end": 8,
+          "color": "purple"
+        },
+        {
+          "name": "Beta Testing",
+          "start": 7,
+          "end": 9,
+          "color": "purple"
+        },
+        {
+          "name": "Bug Fixes & Polish",
+          "start": 8,
+          "end": 10,
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "name": "MARKETING",
+      "tasks": [
+        {
+          "name": "Brand Strategy",
+          "start": 3,
+          "end": 6,
+          "color": "teal"
+        },
+        {
+          "name": "Content Creation",
+          "start": 5,
+          "end": 9,
+          "color": "teal"
+        },
+        {
+          "name": "Pre-Launch Campaign",
+          "start": 8,
+          "end": 11,
+          "color": "teal"
+        }
+      ]
+    },
+    {
+      "name": "LAUNCH",
+      "tasks": [
+        {
+          "name": "Soft Launch",
+          "start": 10,
+          "end": 11,
+          "color": "green"
+        },
+        {
+          "name": "Official Launch",
+          "start": 11,
+          "end": 12,
+          "color": "green"
+        },
+        {
+          "name": "Post-Launch Support",
+          "start": 11,
+          "end": 12,
+          "color": "orange"
+        }
+      ]
+    }
+  ]
+}
